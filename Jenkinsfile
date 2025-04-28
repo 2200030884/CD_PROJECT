@@ -10,7 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh './mvnw clean package -DskipTests'
-                sh 'ls -l target/'  // Confirm the .jar file exists in the target directory
             }
         }
         stage('Docker Build & Run') {
