@@ -2,8 +2,8 @@ FROM openjdk:21
 
 WORKDIR /app
 
-COPY target/*.war app.war
+COPY target/*.jar app.jar
 
 EXPOSE 1121
 
-ENTRYPOINT ["java", "-jar", "app.war"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
